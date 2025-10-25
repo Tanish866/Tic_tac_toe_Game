@@ -28,43 +28,67 @@ document.addEventListener("DOMContentLoaded", () => {
     function winningCombo(char){
         if(arr[0]==char && arr[1]==char && arr[2]==char){
             // the f0th row having the char
-            alert(`${char} wins!`);
-            window.location.reload();
+            setTimeout(() => {
+                alert(`${char} wins!`);
+                resetBoard();
+            }, 100);
         }
         if(arr[3]==char && arr[4]==char && arr[5]==char){
             // the f1th row having the char
-            alert(`${char} wins!`);
-            window.location.reload();
+            setTimeout(() => {
+                alert(`${char} wins!`);
+                resetBoard();
+            }, 100);
         }
         if(arr[6]==char && arr[7]==char && arr[8]==char){
             // the f2th row having the char
-            alert(`${char} wins!`);
-            window.location.reload();
+            setTimeout(() => {
+                alert(`${char} wins!`);
+                resetBoard();
+            }, 100);
         }
         if(arr[0]==char && arr[3]==char && arr[6]==char){
             // the f3th row having the char
-            alert(`${char} wins!`);
-            window.location.reload();
+            setTimeout(() => {
+                alert(`${char} wins!`);
+                resetBoard();
+            }, 100);
         }
         if(arr[1]==char && arr[4]==char && arr[7]==char){
             // the f0th row having the char
-            alert(`${char} wins!`);
-            window.location.reload();
+            setTimeout(() => {
+                alert(`${char} wins!`);
+                resetBoard();
+            }, 100);
         }
         if(arr[2]==char && arr[5]==char && arr[8]==char){
             // the f0th row having the char
-            alert(`${char} wins!`);
-            window.location.reload();
+            setTimeout(() => {
+                alert(`${char} wins!`);
+                resetBoard();
+            }, 100);
         }
         if(arr[0]==char && arr[4]==char && arr[8]==char){
             // the f0th row having the char
-            alert(`${char} wins!`);
-            window.location.reload();
+            setTimeout(() => {
+                alert(`${char} wins!`);
+                resetBoard();
+            }, 100);
         }
         if(arr[2]==char && arr[4]==char && arr[6]==char){
             // the f0th row having the char
-            alert(`${char} wins!`);
-            window.location.reload();
+            setTimeout(() => {
+                alert(`${char} wins!`);
+                resetBoard();
+            }, 100);
         }
+    }
+    function resetBoard(){
+        arr = Array(9).fill(undefined);
+        document.querySelectorAll(".inner").forEach(cell =>{
+            cell.textContent = "";
+            cell.removeAttribute("data-clicked");
+        });
+        chance = false;
     }
 });  
